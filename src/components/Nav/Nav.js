@@ -14,7 +14,7 @@ const Nav = () => {
           </BrandLink>
           <UserMenu>
             <MenuSection>
-              <MenuLink>매장 찾기</MenuLink>
+              <MenuLink>매장찾기</MenuLink>
               <MenuSpan>｜</MenuSpan>
             </MenuSection>
             <MenuSection>
