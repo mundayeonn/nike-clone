@@ -1,9 +1,29 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
+import Drawer from './Drawer/Drawer';
+import CATEGORY_DATA from './Drawer/CategoryData';
 import styled from 'styled-components';
 import { flexBox } from '../../styles/mixin';
-import CATEGORY_DATA from './CategoryData';
 
 const Nav = () => {
+  const [isDrawerOpen, setIsDrawerOpen] = useState(false);
+  const [titleId, setTitleId] = useState(0);
+
+  const onMouseEnter = id => {
+    setIsDrawerOpen(true);
+    setTitleId(id);
+  };
+
+  const onMouseLeave = () => {
+    setIsDrawerOpen(false);
+  };
+
+  const navigate = useNavigate();
+
+  const moveMain = e => {
+    navigate('/Main');
+  };
+
   return (
     <HeaderWrapper>
       <BrandHeader>
